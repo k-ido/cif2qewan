@@ -73,14 +73,15 @@ def get_klabel(wannier_band_gnu):
     for xtic in xtics:
         label, pos = xtic.split()
         x_list.append(float(pos))
-        label_list.append(label[1:-1].replace("G", "$\\Gamma$").replace("S", "$\\Sigma$"))
+        #label_list.append(label[1:-1].replace("G", "$\\Gamma$").replace("S", "$\\Sigma$"))
+        label_list.append(label[1:-1].replace("GAMMA", "$\\Gamma$").replace("SIGMA", "$\\Sigma$"))
 
     x_list = np.array(x_list) / max(x_list)
     return x_list, label_list
 
 
 def main(output_dir):
-    scfout = "scf.out"
+    scfout = "../scf.out"
     wannier_band = "pwscf_band.dat"
     wannier_band_gnu = "pwscf_band.gnu"
     pwscf_band = "../band/bands.out.gnu"

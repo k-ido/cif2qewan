@@ -246,8 +246,8 @@ class qe_wannier_in:
         self.tick_labels = []
         for i, label in enumerate(kpoints_labels):
             if(label == ""): continue
-            label = label.replace("GAMMA","G")
-            label = label.replace("SIGMA","S")
+            #label = label.replace("GAMMA","G")
+            #label = label.replace("SIGMA","S")
             if(i != 0 and kpoints_labels[i-1] != ""):
                 self.tick_labels.extend(["", label])
                 self.tick_locs.extend([np.array([0.0, 0.0, 0.0]), self.kpoints_rel[i]])
