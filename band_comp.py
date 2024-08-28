@@ -85,7 +85,6 @@ def main(output_dir):
     wannier_band_gnu = "pwscf_band.gnu"
     pwscf_band = "../band/bands.out.gnu"
 
-
     x, y = get_band_data(wannier_band)
     x_qe, y_qe = get_band_data(pwscf_band)
 
@@ -103,7 +102,10 @@ def main(output_dir):
     plt.xlim([0, 1])
     y_min = np.min(y-ef)
     y_max = np.max(y-ef)
-    plt.ylim([y_min - 0.05*(y_max-y_min), y_max + 0.05*(y_max-y_min)])
+    py_min = y_min - 0.05*(y_max-y_min)
+    py_max = y_max + 0.05*(y_max-y_min)
+    plt.ylim([py_min, py_max])
+    plt.vlines(klabel[0], py_min, py_max, colors='black', linewidth=1.0, zorder=3)
 
     plt.savefig(f"{output_dir}/band_compare.png", bbox_inches="tight")
     plt.savefig(f"{output_dir}/band_compare.eps", bbox_inches="tight")
