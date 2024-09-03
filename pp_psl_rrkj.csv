@@ -1,6 +1,6 @@
 atom,pp_file_name,nexclude,orbitals,ecutwfc,ecutrho
 H,H.pbe-rrkjus_psl.0.1,0,s,46.0,221.0
-He,He.pbe-rrkjus_psl.0.2.3,1,,41.0,165.0
+He,He.pbe-rrkjus_psl.0.2.3,1,p,41.0,165.0
 Li,Li.pbe-s-rrkjus_psl.0.2.1,1,s,78.0,355.0
 Be,Be.pbe-n-rrkjus_psl.0.2,0,sp,30.0,197.0
 B,B.pbe-n-rrkjus_psl.0.1,0,sp,48.0,216.0
